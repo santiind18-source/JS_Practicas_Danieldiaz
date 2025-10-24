@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Gestión de Errores</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #eef2f6; /* Fondo gris azulado muy claro */
+            margin: 0;
+            padding: 25px;
+            color: #3a3a3a; /* Texto principal oscuro */
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro y robusto para el título principal */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .section-container {
+            background-color: #ffffff; /* Fondo blanco para las secciones, limpio */
+            border: 1px solid #d4dce4; /* Borde gris azulado claro y sutil */
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil y simple */
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-container:hover {
+            transform: translateY(-3px);
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo oscuro para los títulos de sección */
+            border-bottom: 2px solid #3498db; /* Línea azul limpia y clara */
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        p {
+            color: #555; /* Texto de párrafo en gris suave */
+            margin-bottom: 1em;
+        }
+        pre {
+            background-color: #f0f3f6; /* Fondo gris azulado muy claro para bloques de código */
+            border: 1px solid #e0e6ed; /* Borde muy sutil para el código */
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-top: 15px;
+            font-family: 'Fira Code', Consolas, monospace;
+            color: #c0392b; /* Rojo sobrio para el código */
+            font-size: 0.9em;
+        }
+        .output {
+            background-color: #eaf1f6; /* Fondo azul claro y tranquilo para la salida */
+            border: 1px dashed #7a9cb6; /* Borde punteado azul grisáceo */
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            color: #2c3e50; /* Texto oscuro para la salida */
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+            min-height: 50px; /* Asegura un tamaño mínimo */
+            display: flex; /* Para centrar el contenido verticalmente si es pequeño */
+            align-items: center;
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Gestión de Errores</h1>
+
+    <div class="section-container" id="tema-10-1">
+        <h2>10.1 Gestión de Errores con "try...catch"</h2>
+        <p>En esta sección, se explorará el uso fundamental de la estructura `try...catch` para interceptar y manejar excepciones, asegurando que la ejecución del script continúe sin interrupciones inesperadas.</p>
+        <div class="output" id="output-10-1">
+            <!-- La salida de JavaScript se mostrará aquí -->
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-10-2">
+        <h2>10.2 Errores Personalizados y Extensión</h2>
+        <p>Aquí aprenderemos a definir y utilizar nuestros propios tipos de errores personalizados, extendiendo la clase `Error` nativa. Esto permite un manejo de situaciones específicas más preciso y semántico en nuestra aplicación.</p>
+        <div class="output" id="output-10-2">
+            <!-- La salida de JavaScript se mostrará aquí -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

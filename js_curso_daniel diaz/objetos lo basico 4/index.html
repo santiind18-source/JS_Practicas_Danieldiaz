@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avanzado - Gestión de Objetos</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f5f7; /* Fondo gris azulado muy claro y simple */
+            margin: 0;
+            padding: 25px;
+            color: #3a3a3a; /* Texto principal oscuro pero no negro absoluto */
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro y robusto para el título principal */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.6em;
+            font-weight: 700;
+        }
+        .section-container {
+            background-color: #ffffff; /* Fondo blanco para las secciones, muy limpio */
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil y simple */
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-container:hover {
+            transform: translateY(-3px);
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo para los títulos de sección */
+            margin-top: 0;
+            border-bottom: 2px solid #3498db; /* Línea azul limpia y clara */
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        h3 {
+            color: #3498db; /* Azul medio para subtítulos, como acento */
+            margin-top: 25px;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .result-box {
+            background-color: #eaf1f6; /* Fondo azul claro y tranquilo para los resultados */
+            border: 1px solid #c8d8e4; /* Borde sutil para el cuadro de resultados */
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 6px;
+            color: #2c3e50; /* Texto oscuro para los resultados */
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+        }
+        pre {
+            background-color: #f0f3f6; /* Fondo gris azulado muy claro para bloques de código */
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #e0e6ed; /* Borde muy sutil para el código */
+            margin-top: 15px;
+        }
+        code {
+            font-family: 'Fira Code', Consolas, monospace;
+            color: #c0392b; /* Rojo sobrio para el código */
+            font-weight: 500;
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <h1>JavaScript Avanzado - Gestión de Objetos</h1>
+
+    <div class="section-container" id="tema-4-1">
+        <h2>4.1 Fundamentos de Objetos</h2>
+        <div class="content">
+            <p>Exploración de la creación y acceso a propiedades de objetos en JavaScript.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Consulta la consola del navegador (F12) para los resultados detallados de la manipulación de objetos.</p>
+                <p id="output-4-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-2">
+        <h2>4.2 Referencias y Copia de Objetos</h2>
+        <div class="content">
+            <p>Este apartado ilustra el comportamiento de las referencias en la copia de objetos, contrastándolo con los tipos primitivos.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Observa la consola (F12) para comprender las diferencias entre referencias y copias de objetos.</p>
+                <p id="output-4-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-3">
+        <h2>4.3 Recolección de Basura (Garbage Collection)</h2>
+        <div class="content">
+            <p>Explicación conceptual de cómo JavaScript gestiona la memoria y libera recursos de objetos no utilizados.</p>
+            <h3>Consideraciones:</h3>
+            <div class="result-box">
+                <p>Este tema es conceptual; la comprensión radica en cómo el motor de JavaScript optimiza el uso de la memoria.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-4">
+        <h2>4.4 Métodos de Objeto y "this"</h2>
+        <div class="content">
+            <p>Análisis de la creación de métodos dentro de objetos y el uso fundamental de la palabra clave `this`.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Verifica la consola (F12) para observar la ejecución de métodos y el contexto de `this`.</p>
+                <p id="output-4-4"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-5">
+        <h2>4.5 Funciones Constructoras y "new"</h2>
+        <div class="content">
+            <p>Aprendizaje sobre el uso de funciones constructoras y el operador `new` para instanciar múltiples objetos similares.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Consulta la consola (F12) para los objetos creados mediante funciones constructoras.</p>
+                <p id="output-4-5"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-6">
+        <h2>4.6 Encadenamiento Opcional "?."</h2>
+        <div class="content">
+            <p>Aplicación del operador de encadenamiento opcional para acceder de forma segura a propiedades anidadas en objetos complejos.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>La consola (F12) demostrará cómo `?.` previene errores al acceder a propiedades inexistentes.</p>
+                <p id="output-4-6"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-7">
+        <h2>4.7 El Tipo de Dato Symbol</h2>
+        <div class="content">
+            <p>Introducción al tipo `Symbol` para la creación de identificadores únicos y no colisionables en propiedades de objetos.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Ver la consola (F12) para ejemplos prácticos de propiedades definidas con `Symbol`.</p>
+                <p id="output-4-7"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-4-8">
+        <h2>4.8 Conversión de Objeto a Primitivo</h2>
+        <div class="content">
+            <p>Análisis de cómo los objetos son convertidos a tipos primitivos cuando se involucran en operaciones estándar.</p>
+            <h3>Resultados:</h3>
+            <div class="result-box">
+                <p>Revisa la consola (F12) para entender las reglas de conversión de objetos a tipos primitivos.</p>
+                <p id="output-4-8"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

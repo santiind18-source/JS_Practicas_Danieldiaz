@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Avanzado - Prototipos y Herencia</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #eef2f6; /* Fondo gris azulado muy claro */
+            margin: 0;
+            padding: 25px;
+            color: #3a3a3a; /* Texto principal oscuro */
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff; /* Fondo blanco principal del contenedor */
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada pero limpia */
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro y robusto para el título principal */
+            text-align: center;
+            margin-bottom: 45px;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo oscuro para los títulos de sección (principal) */
+            border-bottom: 2px solid #3498db; /* Línea azul limpia y clara */
+            padding-bottom: 15px;
+            margin-top: 40px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        h3 {
+            color: #3498db; /* Azul medio para subtítulos, como acento */
+            margin-top: 30px;
+            margin-bottom: 18px;
+            font-size: 1.4em;
+            border-left: 4px solid #7a9cb6; /* Barra azul grisáceo sutil */
+            padding-left: 12px;
+            font-weight: 500;
+        }
+        .section-box {
+            background-color: #f8fbfc; /* Fondo muy claro, casi blanco, para cada sección */
+            border: 1px solid #d4dce4; /* Borde gris azulado claro y sutil */
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra más suave */
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-box:hover {
+            transform: translateY(-3px);
+        }
+        .section-box p {
+            margin-bottom: 1.2em;
+            color: #555;
+        }
+        .code-snippet { /* Este estilo no se usa en el HTML proporcionado, pero lo mantengo por si acaso */
+            background-color: #f0f3f6;
+            border: 1px solid #e0e6ed;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+            color: #444;
+        }
+        .console-output {
+            background-color: #2c3e50; /* Azul oscuro para la consola */
+            color: #2ecc71; /* Verde brillante para texto de consola */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 280px; /* Altura limitada */
+            overflow-y: auto; /* Scroll vertical */
+            border-left: 5px solid #3498db; /* Borde azul decorativo */
+        }
+        .console-output strong {
+            color: #ffffff; /* Texto fuerte en blanco en la consola */
+        }
+        .result-dom {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #eaf1f6; /* Azul muy claro para resultados DOM */
+            border-left: 6px solid #3498db; /* Borde azul principal */
+            border-radius: 8px;
+            font-weight: bold;
+            color: #2c3e50; /* Azul oscuro para el texto del resultado DOM */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+            font-size: 1em;
+        }
+        .note {
+            background-color: #f0f7fb; /* Azul muy claro para las notas */
+            border-left: 5px solid #3498db; /* Borde azul para las notas */
+            padding: 18px;
+            margin-top: 30px;
+            margin-bottom: 35px;
+            color: #2c3e50; /* Texto azul oscuro para las notas */
+            border-radius: 8px;
+            font-size: 0.98em;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .note strong {
+            color: #2c3e50; /* Negrita en azul oscuro para las notas */
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Avanzado - Prototipos y Herencia</h1>
+        <p class="note">
+            <strong>Guía Importante:</strong><br>
+            Para una visualización completa y un análisis detallado de los ejemplos de código, por favor,
+            abre la consola de tu navegador. Utiliza `F12` (en Windows/Linux) o `Cmd + Opt + I` (en macOS).
+            Es recomendable recargar la página después de abrir la consola para asegurar la captura de todos los logs.
+        </p>
+
+        <h2>8. Herencia Prototípica</h2>
+
+        <!-- Sección para 8.1 Herencia Prototípica -->
+        <section id="tema-8-1" class="section-box">
+            <h3>8.1 Herencia Prototípica</h3>
+            <p>
+                Este concepto fundamental en JavaScript explica cómo los objetos pueden heredar propiedades y métodos de otros objetos,
+                formando una "cadena de prototipos". Cuando se accede a una propiedad que no está directamente en un objeto,
+                JavaScript busca sucesivamente en su prototipo, y luego en el prototipo de este, hasta llegar a <code>null</code>.
+            </p>
+            <div id="output-8-1" class="console-output">
+                <strong>Salida de Consola (8.1):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.1.
+            </div>
+            <div id="result-8-1" class="result-dom">
+                <strong>Resultados en el DOM (8.1):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.1 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.2 Prototipo F (funciones constructoras) -->
+        <section id="tema-8-2" class="section-box">
+            <h3>8.2 El Prototipo de Función Constructora (F.prototype)</h3>
+            <p>
+                En JavaScript, cada función constructora (por ejemplo, <code>function Usuario() {...}</code>) posee una
+                propiedad especial <code>prototype</code> (F.prototype). Este objeto es el lugar idóneo para definir
+                los métodos que serán compartidos y heredados por todas las instancias creadas con dicha función
+                constructora mediante la palabra clave <code>new</code>. Esto optimiza el uso de memoria y establece la herencia.
+            </p>
+            <div id="output-8-2" class="console-output">
+                <strong>Salida de Consola (8.2):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.2.
+            </div>
+            <div id="result-8-2" class="result-dom">
+                <strong>Resultados en el DOM (8.2):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.2 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.3 Prototipos Nativos -->
+        <section id="tema-8-3" class="section-box">
+            <h3>8.3 Prototipos Nativos</h3>
+            <p>
+                JavaScript incluye objetos y constructores "nativos" (incorporados) como <code>Object</code>, <code>Array</code>,
+                <code>Function</code>, <code>String</code>, <code>Number</code>, <code>Date</code>, entre otros.
+                Cada uno dispone de su propio prototipo (ej., <code>Array.prototype</code>), el cual contiene los métodos
+                y propiedades por defecto utilizados por sus instancias (ej., <code>.push()</code> para arrays).
+                Es posible extender estos prototipos, aunque se debe hacer con extrema precaución para evitar conflictos.
+            </p>
+            <div id="output-8-3" class="console-output">
+                <strong>Salida de Consola (8.3):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.3.
+            </div>
+            <div id="result-8-3" class="result-dom">
+                <strong>Resultados en el DOM (8.3):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.3 aparecerán aquí. -->
+            </div>
+        </section>
+
+        <!-- Sección para 8.4 Métodos prototipo, objetos sin __proto__ -->
+        <section id="tema-8-4" class="section-box">
+            <h3>8.4 Métodos de Prototipo y Objetos sin __proto__</h3>
+            <p>
+                Este segmento explora el trabajo con prototipos de forma estructurada, utilizando métodos como
+                <code>Object.getPrototypeOf()</code> y <code>Object.setPrototypeOf()</code>. También se aborda
+                <code>Object.create()</code> para la creación de objetos con un prototipo específico. Finalmente,
+                se muestra cómo crear "objetos diccionario" que carecen de un prototipo por defecto (prototipo es <code>null</code>),
+                ideales para almacenar datos sin interferencias de métodos prototípicos.
+            </p>
+            <div id="output-8-4" class="console-output">
+                <strong>Salida de Consola (8.4):</strong><br>
+                Aquí se mostrarán los logs de `console.log` para la sección 8.4.
+            </div>
+            <div id="result-8-4" class="result-dom">
+                <strong>Resultados en el DOM (8.4):</strong><br>
+                <!-- Los resultados generados dinámicamente para el DOM en 8.4 aparecerán aquí. -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

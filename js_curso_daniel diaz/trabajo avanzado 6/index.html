@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Conceptos Avanzados</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 25px;
+            background-color: #eef2f6; /* Fondo gris azulado muy claro */
+            color: #3a3a3a; /* Texto principal oscuro */
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro y robusto para el título principal */
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .intro-note {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .section-container {
+            background-color: #ffffff; /* Fondo blanco para las secciones, limpio */
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil y simple */
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .section-container:hover {
+            transform: translateY(-3px);
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo oscuro para los títulos de sección */
+            border-bottom: 2px solid #3498db; /* Línea azul limpia y clara */
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 1em;
+            color: #555;
+        }
+        .code-output {
+            background-color: #eaf1f6; /* Fondo azul claro y tranquilo para los resultados */
+            border: 1px solid #c8d8e4; /* Borde sutil */
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            color: #2c3e50; /* Texto oscuro para los resultados */
+            white-space: pre-wrap;
+            font-size: 0.95em;
+        }
+        .console-note {
+            font-style: italic;
+            color: #7a8a99; /* Gris azulado para las notas de consola */
+            margin-top: 10px;
+            font-size: 0.9em;
+            border-left: 3px solid #7a9cb6; /* Línea decorativa */
+            padding-left: 10px;
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Conceptos Avanzados</h1>
+    <p class="intro-note">Presiona &lt;F12&gt; para ver la mayoría de los resultados en la consola del navegador.</p>
+
+    <div id="content-area">
+        
+        <section id="tema-6-1" class="section-container">
+            <h2>6.1 Recursión y Pila de Llamadas</h2>
+            <p>Demostración de la recursión, con ejemplos de cálculo factorial y la suma de una serie numérica, ilustrando la gestión de la pila de llamadas.</p>
+            <div class="code-output" id="output-6-1"></div>
+            <p class="console-note">Consulta la consola para observar la traza de pila durante la ejecución recursiva.</p>
+        </section>
+
+        <section id="tema-6-2" class="section-container">
+            <h2>6.2 Parámetros Rest y Sintaxis Spread</h2>
+            <p>Exploración de cómo los parámetros "rest" agrupan argumentos en un array y cómo el operador "spread" expande elementos iterables.</p>
+            <div class="code-output" id="output-6-2"></div>
+        </section>
+
+        <section id="tema-6-3" class="section-container">
+            <h2>6.3 Alcance de Variables y Closures</h2>
+            <p>Análisis del alcance de las variables (global, función, bloque) y el concepto fundamental de los closures (cierres).</p>
+            <div class="code-output" id="output-6-3"></div>
+            <p class="console-note">Los closures se comprenden mejor a través de interacciones observadas en la consola.</p>
+        </section>
+
+        <section id="tema-6-4" class="section-container">
+            <h2>6.4 El Antiguo "var"</h2>
+            <p>Estudio de las particularidades de `var`, incluyendo su alcance funcional y el comportamiento de hoisting, en comparación con `let` y `const`.</p>
+            <div class="code-output" id="output-6-4"></div>
+            <p class="console-note">Observa las diferencias de alcance y comportamiento en la consola.</p>
+        </section>
+
+        <section id="tema-6-5" class="section-container">
+            <h2>6.5 Objeto Global</h2>
+            <p>Demostración del objeto global (`window` en navegadores, `global` en Node.js, `globalThis` como estándar) y sus propiedades esenciales.</p>
+            <div class="code-output" id="output-6-5"></div>
+        </section>
+
+        <section id="tema-6-6" class="section-container">
+            <h2>6.6 Función como Objeto (NFE)</h2>
+            <p>Exploración de las funciones como objetos de primera clase, sus propiedades intrínsecas y el concepto de NFE (Named Function Expression).</p>
+            <div class="code-output" id="output-6-6"></div>
+            <p class="console-note">Los detalles del objeto de función y NFE se aprecian mejor en la consola.</p>
+        </section>
+
+        <section id="tema-6-7" class="section-container">
+            <h2>6.7 Sintaxis "new Function"</h2>
+            <p>Uso del constructor `new Function` para la creación dinámica de funciones a partir de cadenas de texto.</p>
+            <div class="code-output" id="output-6-7"></div>
+        </section>
+
+        <section id="tema-6-8" class="section-container">
+            <h2>6.8 Programación Asíncrona: setTimeout y setInterval</h2>
+            <p>Implementación de funciones para ejecutar código tras un retardo (`setTimeout`) o de forma recurrente (`setInterval`).</p>
+            <div class="code-output" id="output-6-8"></div>
+            <p class="console-note">Observa cómo los mensajes aparecen en la consola con el tiempo de retardo o intervalo.</p>
+        </section>
+
+        <section id="tema-6-9" class="section-container">
+            <h2>6.9 Decoradores, Reenvío, Call/Apply</h2>
+            <p>Ejemplos de decoradores de funciones, y el uso de `call` y `apply` para invocar funciones con un contexto `this` específico.</p>
+            <div class="code-output" id="output-6-9"></div>
+        </section>
+
+        <section id="tema-6-10" class="section-container">
+            <h2>6.10 Vinculación de Funciones (`bind`)</h2>
+            <p>Utilización del método `bind` para crear nuevas funciones con un contexto (`this`) y argumentos predefinidos.</p>
+            <div class="code-output" id="output-6-10"></div>
+        </section>
+
+        <section id="tema-6-11" class="section-container">
+            <h2>6.11 Funciones de Flecha: Profundización</h2>
+            <p>Repaso de las funciones de flecha, su sintaxis compacta y su manejo distintivo del `this` léxico.</p>
+            <div class="code-output" id="output-6-11"></div>
+        </section>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

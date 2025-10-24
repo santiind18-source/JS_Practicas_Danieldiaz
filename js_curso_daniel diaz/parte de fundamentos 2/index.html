@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript - Desarrollo Personal</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Fuente moderna y limpia */
+            margin: 20px;
+            background-color: #f0f2f5; /* Fondo gris claro y suave */
+            color: #333; /* Texto principal oscuro */
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro para el título principal */
+            text-align: center;
+            font-weight: 700; /* Negrita */
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo para los subtítulos */
+            border-bottom: 2px solid #3498db; /* Línea azul para destacar */
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-weight: 600;
+        }
+        h3 {
+            color: #3498db; /* Azul medio para los encabezados de sección */
+            margin-top: 25px;
+            font-weight: 500;
+        }
+        section {
+            background-color: #ffffff; /* Fondo blanco para las secciones */
+            margin-bottom: 25px;
+            padding: 20px 25px;
+            border-radius: 10px; /* Bordes más suaves */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra más pronunciada pero sutil */
+        }
+        pre {
+            background-color: #e9eff3; /* Fondo gris azulado claro para bloques de código */
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Consolas', monospace; /* Fuente más técnica */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #d4dce0; /* Borde sutil */
+        }
+        code {
+            color: #c0392b; /* Rojo sobrio para el código en línea */
+            font-weight: 500;
+        }
+        .console-output {
+            background-color: #2c3e50; /* Fondo oscuro para la consola */
+            color: #2ecc71; /* Verde brillante para la salida de la consola */
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }
+        button {
+            background-color: #3498db; /* Azul principal para los botones */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            margin-top: 15px;
+            transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+        }
+        button:hover {
+            background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 8px;
+            font-size: 1rem;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); /* Sombra interna para inputs */
+        }
+        ul {
+            list-style-type: square; /* Estilo de lista cuadrado */
+            margin-left: 25px;
+            padding: 0;
+            color: #555;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+    <!-- Opcional: Para usar la fuente 'Roboto' y 'Fira Code' si no están instaladas localmente -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Prácticas de JavaScript Esenciales</h1>
+    <p>Abre la consola del navegador (F12) para interactuar y ver la mayoría de los resultados.</p>
+
+    <script src="main.js"></script> 
+
+    <section id="tema-2-1">
+        <h2>2.1 Fundamentos: "Hola mundo"</h2>
+        <p>El mensaje inicial "¡Hola mundo desde main.js!"</p>
+    </section>
+
+    <section id="tema-2-2">
+        <h2>2.2 Estructura del Código</h2>
+        <p>Explorando la sintaxis fundamental y los comentarios esenciales.</p>
+    </section>
+
+    <section id="tema-2-3">
+        <h2>2.3 El Modo Moderno: "use strict"</h2>
+        <p>Implementación de <code>"use strict"</code> para un código JavaScript más robusto y seguro. </p>
+    </section>
+
+    <section id="tema-2-4">
+        <h2>2.4 Declaración de Variables</h2>
+        <p>Demostración práctica de <code>let</code>, <code>const</code> y <code>var</code> en la gestión de datos.</p>
+    </section>
+
+    <section id="tema-2-5">
+        <h2>2.5 Gestión de Tipos de Datos</h2>
+        <p>Análisis de los diversos tipos de datos en JavaScript mediante <code>typeof</code>.</p>
+    </section>
+
+    <section id="tema-2-6">
+        <h2>2.6 Interacción con el Usuario: Alertas y Confirmaciones</h2>
+        <p>Interacciones básicas mediante <code>alert</code>, <code>prompt</code> y <code>confirm</code>. Se solicitará tu edad para la práctica.</p>
+    </section>
+
+    <section id="tema-2-7">
+        <h2>2.7 Conversión de Tipos de Datos</h2>
+        <p>Procedimientos para la conversión de datos entre diferentes tipos. Consulta la consola para los resultados detallados.</p>
+    </section>
+
+    <section id="tema-2-8">
+        <h2>2.8 Operadores Básicos y Aritmética</h2>
+        <p>Demostración de operadores aritméticos y de asignación fundamentales.</p>
+    </section>
+
+    <section id="tema-2-9">
+        <h2>2.9 Lógica de Comparaciones</h2>
+        <p>Uso de <code>==</code>, <code>===</code>, <code>></code>, y otros operadores booleanos para comparaciones.</p>
+    </section>
+
+    <section id="tema-2-10">
+        <h2>2.10 Ramificación Condicional: if y Ternario</h2>
+        <p>Estructuras condicionales. El resultado basado en la temperatura se mostrará aquí.</p>
+    </section>
+
+    <section id="tema-2-11">
+        <h2>2.11 Operadores Lógicos Avanzados</h2>
+        <p>Aplicación de <code>&&</code>, <code>||</code>, <code>!</code>. Revisa la consola para los resultados.</p>
+    </section>
+
+    <section id="tema-2-12">
+        <h2>2.12 Operador de Fusión Nula '??'</h2>
+        <p>Utilización del operador de fusión nula para manejar valores <code>null</code> o <code>undefined</code> de forma efectiva. Consulta la consola.</p>
+    </section>
+
+    <section id="tema-2-13">
+        <h2>2.13 Estructuras de Bucle: while y for</h2>
+        <p>Ejemplos prácticos de bucles iterativos. La lista de elementos se generará aquí.</p>
+    </section>
+
+    <section id="tema-2-14">
+        <h2>2.14 La Declaración "switch"</h2>
+        <p>Control de flujo mediante la estructura <code>switch</code>. El color de la fruta se mostrará aquí.</p>
+    </section>
+
+    <section id="tema-2-15">
+        <h2>2.15 Fundamentos de Funciones</h2>
+        <p>Creación y aplicación de funciones básicas en JavaScript.</p>
+    </section>
+
+    <section id="tema-2-16">
+        <h2>2.16 Expresiones de Funciones</h2>
+        <p>Definición de funciones a través de expresiones para una mayor flexibilidad.</p>
+    </section>
+
+    <section id="tema-2-17">
+        <h2>2.17 Funciones de Flecha: Sintaxis Concisa</h2>
+        <p>Uso de las funciones de flecha para una escritura de código más compacta y eficiente.</p>
+    </section>
+
+    <section id="tema-2-18">
+        <h2>2.18 Aspectos Específicos de JavaScript</h2>
+        <p>Cobertura de características y consideraciones especiales de JavaScript según la documentación.</p>
+        <p>Revisa la consola para obtener detalles adicionales.</p>
+    </section>
+
+</body>
+</html>

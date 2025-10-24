@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Estructuras de Clase</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #eef2f6; /* Fondo gris azulado muy claro */
+            margin: 0;
+            padding: 25px;
+            color: #3a3a3a; /* Texto principal oscuro */
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50; /* Azul oscuro y robusto para el título principal */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        section {
+            background-color: #ffffff; /* Fondo blanco para las secciones, limpio */
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil y simple */
+            transition: transform 0.2s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-3px);
+        }
+        h2 {
+            color: #34495e; /* Azul grisáceo oscuro para los subtítulos de sección */
+            border-bottom: 2px solid #3498db; /* Línea azul limpia y clara */
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        p {
+            color: #555; /* Texto de párrafo en gris suave */
+            margin-bottom: 1em;
+        }
+        pre {
+            background-color: #f0f3f6; /* Fondo gris azulado muy claro para bloques de código */
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #e0e6ed; /* Borde muy sutil para el código */
+            margin-top: 15px;
+            font-family: 'Fira Code', Consolas, monospace;
+            color: #c0392b; /* Rojo sobrio para el código */
+            font-size: 0.9em;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 18px;
+            border: 1px dashed #7a9cb6; /* Borde punteado azul grisáceo */
+            background-color: #eaf1f6; /* Fondo azul claro y tranquilo para el output */
+            min-height: 30px;
+            border-radius: 6px;
+            color: #2c3e50; /* Texto oscuro para el output */
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+        }
+        .console-output {
+            color: #2ecc71; /* Verde sutil para la salida de consola positiva */
+            font-weight: 500; /* Negrita más suave */
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <h1>JavaScript - Estructuras de Clase</h1>
+
+    <section id="clases-9-1">
+        <h2>9.1 Fundamentos de la Sintaxis de Clases</h2>
+        <p>Exploración de la declaración básica de una clase en JavaScript y cómo se instancian objetos a partir de ella, sentando las bases de la programación orientada a objetos.</p>
+        <div class="output" id="output-9-1"></div>
+    </section>
+
+    <section id="clases-9-2">
+        <h2>9.2 Herencia entre Clases</h2>
+        <p>Demostración práctica de cómo una clase puede extenderse de otra, heredando sus propiedades y métodos. Se ilustra la relación "es un" fundamental en el diseño orientado a objetos.</p>
+        <div class="output" id="output-9-2"></div>
+    </section>
+
+    <section id="clases-9-3">
+        <h2>9.3 Miembros Estáticos: Propiedades y Métodos</h2>
+        <p>Análisis de las propiedades y métodos que pertenecen directamente a la clase constructora, en lugar de a sus instancias individuales. Son utilidades asociadas a la clase en sí, no a los objetos específicos.</p>
+        <div class="output" id="output-9-3"></div>
+    </section>
+
+    <section id="clases-9-4">
+        <h2>9.4 Control de Acceso: Miembros Privados y Protegidos</h2>
+        <p>Este segmento ilustra el uso de convenciones como el prefijo `_` para miembros "protegidos" y el `#` para miembros "privados" (ecmascript privado real), para gestionar el nivel de acceso a las propiedades y métodos dentro de una clase.</p>
+        <div class="output" id="output-9-4"></div>
+    </section>
+
+    <section id="clases-9-5">
+        <h2>9.5 Extensión de Clases Nativas</h2>
+        <p>Ejemplo práctico de cómo extender y personalizar clases preexistentes de JavaScript, como `Array`, `Map` o `Error`, adaptando su funcionalidad a necesidades específicas del proyecto.</p>
+        <div class="output" id="output-9-5"></div>
+    </section>
+
+    <section id="clases-9-6">
+        <h2>9.6 Verificación de Instancia: el operador "instanceof"</h2>
+        <p>Uso del operador `instanceof` para verificar de forma fiable si un objeto es una instancia directa o indirecta de una clase específica o de un constructor prototípico.</p>
+        <div class="output" id="output-9-6"></div>
+    </section>
+
+    <section id="clases-9-7">
+        <h2>9.7 Mixins: Composición de Funcionalidades</h2>
+        <p>Demostración de la aplicación de mixins como patrón para incorporar funcionalidades reutilizables a las clases, permitiendo una composición flexible y evitando la herencia múltiple.</p>
+        <div class="output" id="output-9-7"></div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

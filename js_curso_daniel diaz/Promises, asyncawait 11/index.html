@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript.info - Promesas, async/await</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f2f7; /* Azul claro muy suave */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #00796b; /* Verde azulado oscuro para el título */
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .section-title {
+            background-color: #b2dfdb; /* Verde azulado claro para títulos de sección */
+            color: #004d40; /* Verde azulado muy oscuro */
+            padding: 12px 20px;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            font-size: 1.6em;
+            font-weight: bold;
+            border-left: 5px solid #00796b;
+        }
+        .content-block {
+            background-color: #f5fafd; /* Fondo muy claro para bloques de contenido, casi blanco */
+            border: 1px solid #b2dfdb;
+            padding: 18px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+        .content-block p {
+            margin-top: 0;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .result-output {
+            background-color: #f0f4f7;
+            border: 1px dashed #00796b;
+            padding: 12px;
+            min-height: 60px;
+            white-space: pre-wrap;
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            color: #212121;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+        .console-output {
+            background-color: #263238; /* Gris oscuro para la consola */
+            color: #a5d6a7; /* Verde claro para el texto de la consola */
+            padding: 12px;
+            min-height: 60px;
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calidad del Curso: JavaScript Asíncrono</h1>
+    <p style="text-align: center; font-style: italic; color: #555;">Presiona &lt;F12&gt; para ver la mayoría de los resultados de depuración.</p>
+
+    <div class="container">
+            <div class="result-output">
+                <!-- Los resultados de console.log no se ven directamente aquí, pero es para la estructura -->
+                Consulta la consola del navegador (F12) para los mensajes de depuración detallados.
+            </div>
+        </div>
+
+        <!-- TEMAS DE PROMESAS, ASYNC/AWAIT -->
+        <div class="section-title">11. Promesas y Asincronismo</div>
+
+        <div class="section-title">11.1 Introducción: Callbacks</div>
+        <div class="content-block">
+            <p>Exploración de la programación asíncrona tradicional con callbacks y sus desafíos inherentes, como el notorio "Callback Hell".</p>
+            <div class="result-output" id="output-11-1"></div>
+            <p><em>Para la secuencia de eventos asíncronos, revisa la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.2 El Objeto Promesa</div>
+        <div class="content-block">
+            <p>Demostración de la creación y consumo de una Promesa, ilustrando sus estados fundamentales: `pending`, `fulfilled` y `rejected`.</p>
+            <div class="result-output" id="output-11-2"></div>
+            <p><em>Los estados de la promesa se reflejan en la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.3 Encadenamiento de Promesas</div>
+        <div class="content-block">
+            <p>Ejemplo práctico de cómo encadenar múltiples operaciones asíncronas utilizando el método `.then()` para lograr un código más legible y estructurado.</p>
+            <div class="result-output" id="output-11-3"></div>
+            <p><em>La secuencia del encadenamiento de promesas se muestra en la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.4 Gestión de Errores con Promesas</div>
+        <div class="content-block">
+            <p>Métodos para capturar y manejar errores en promesas utilizando `.catch()`, y cómo los errores se propagan a través de la cadena.</p>
+            <div class="result-output" id="output-11-4"></div>
+            <p><em>Verifica la consola para la demostración del manejo de errores.</em></p>
+        </div>
+
+        <div class="section-title">11.5 API de Promesas Avanzada</div>
+        <div class="content-block">
+            <p>Uso de métodos estáticos clave como `Promise.all()`, `Promise.race()`, `Promise.allSettled()` y `Promise.any()` para una gestión eficiente de múltiples promesas.</p>
+            <div class="result-output" id="output-11-5"></div>
+            <p><em>Los resultados de la API de promesas están disponibles en la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.6 Promisificación: De Callbacks a Promesas</div>
+        <div class="content-block">
+            <p>El proceso de convertir funciones tradicionales basadas en callbacks en funciones que retornan promesas, modernizando el código asíncrono.</p>
+            <div class="result-output" id="output-11-6"></div>
+            <p><em>El resultado de la promisificación se encuentra en la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.7 El Bucle de Eventos y Microtareas</div>
+        <div class="content-block">
+            <p>Profundizando en el funcionamiento del bucle de eventos de JavaScript y el papel crucial de la cola de microtareas en la ejecución de promesas.</p>
+            <div class="result-output" id="output-11-7"></div>
+            <p><em>La secuencia de microtareas y macrotareas se detalla en la consola.</em></p>
+        </div>
+
+        <div class="section-title">11.8 Async/Await: Sincronizando lo Asíncrono</div>
+        <div class="content-block">
+            <p>Simplificación del código asíncrono mediante el uso de las palabras clave `async` y `await`, permitiendo una lectura más lineal y comprensible.</p>
+            <div class="result-output" id="output-11-8"></div>
+            <p><em>La ejecución de funciones async/await se traza en la consola.</em></p>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript.info - Temas Varios</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e3f2fd; /* Azul muy claro para el fondo */
+            color: #333;
+        }
+        h1 {
+            color: #1a237e; /* Azul oscuro profundo para el título */
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .section-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 35px;
+            padding: 25px 35px;
+            border-top: 5px solid #90caf9; /* Borde superior azul claro */
+        }
+        h2 {
+            color: #283593; /* Azul oscuro para títulos de sección */
+            margin-top: 0;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #bbdefb; /* Separador azul sutil */
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+        .code-example, .output-console {
+            background-color: #263238; /* Gris oscuro para código y consola */
+            border: 1px solid #455a64;
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            white-space: pre-wrap;
+            color: #a5d6a7; /* Verde claro para el texto de la consola/código */
+            font-size: 0.9em;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        /* Estilo para los resultados específicos en la página, si los hay */
+        .result-display {
+            background-color: #e0f2f7; /* Azul claro para resultados directos */
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 5px solid #26a69a; /* Borde verde azulado */
+            border-radius: 5px;
+            color: #004d40; /* Texto verde azulado oscuro */
+            font-family: 'Consolas', 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calidad del Curso - Temas Varios de JavaScript</h1>
+    <p style="text-align: center; color: #555;">&lt;F12&gt; para ver la mayoría de los resultados en la consola del navegador.</p>
+
+    <section id="tema-14-1" class="section-container">
+        <h2>14.1 Proxy y Reflejo (Reflect)</h2>
+        <p>Aquí se demostrará el uso de los objetos <code>Proxy</code> para interceptar y personalizar operaciones fundamentales en objetos, así como el objeto <code>Reflect</code> para operaciones predeterminadas.</p>
+        <div class="output-console" id="output-14-1">
+            Revisa la consola (F12) para ver los mensajes y demostraciones de Proxy y Reflect.
+        </div>
+    </section>
+
+    <section id="tema-14-2" class="section-container">
+        <h2>14.2 `eval()`: Ejecutando Cadenas de Código</h2>
+        <p>Se mostrará cómo la función global <code>eval()</code> puede ejecutar código JavaScript proporcionado como una cadena. Se destacarán sus usos y las consideraciones de seguridad.</p>
+        <div class="output-console" id="output-14-2">
+            Resultados de la ejecución de `eval()` en la consola.
+        </div>
+    </section>
+
+    <section id="tema-14-3" class="section-container">
+        <h2>14.3 Currificación (Curry)</h2>
+        <p>Ejemplo práctico de la técnica de currificación de funciones, un concepto clave en la programación funcional donde una función con múltiples argumentos se transforma en una secuencia de funciones con un solo argumento.</p>
+        <div class="output-console" id="output-14-3">
+            Demostración de currificación en la consola.
+        </div>
+    </section>
+
+    <section id="tema-14-4" class="section-container">
+        <h2>14.4 Tipo de Referencia (Reference Type)</h2>
+        <p>Exploración del concepto interno de Tipo de Referencia en JavaScript, que describe cómo se resuelven las variables y propiedades durante la ejecución del código.</p>
+        <div class="output-console" id="output-14-4">
+            Información sobre el Tipo de Referencia en la consola.
+        </div>
+    </section>
+
+    <section id="tema-14-5" class="section-container">
+        <h2>14.5 `BigInt`: Números Enteros Grandes</h2>
+        <p>Demostración del tipo de dato nativo <code>BigInt</code> en JavaScript, diseñado para manejar números enteros de precisión arbitraria, superando los límites de <code>Number</code>.</p>
+        <div class="output-console" id="output-14-5">
+            Ejemplos de `BigInt` y sus operaciones en la consola.
+        </div>
+    </section>
+
+    <section id="tema-14-6" class="section-container">
+        <h2>14.6 Unicode y Componentes Internos de Cadenas</h2>
+        <p>Se explorará cómo JavaScript gestiona los caracteres Unicode, incluyendo el manejo de pares sustitutos y los componentes internos de las cadenas para una manipulación precisa del texto.</p>
+        <div class="output-console" id="output-14-6">
+            Detalles sobre Unicode y cadenas en la consola.
+        </div>
+    </section>
+
+    <section id="tema-14-7" class="section-container">
+        <h2>14.7 `WeakRef` y `FinalizationRegistry`</h2>
+        <p>Demostración de <code>WeakRef</code> para crear referencias débiles a objetos y <code>FinalizationRegistry</code> para ejecutar una función de limpieza cuando un objeto es recolectado por el recolector de basura.</p>
+        <div class="output-console" id="output-14-7">
+            Resultados de WeakRef y FinalizationRegistry en la consola.
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

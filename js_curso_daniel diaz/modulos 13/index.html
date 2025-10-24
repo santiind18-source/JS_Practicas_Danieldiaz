@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas JavaScript - Módulos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e3f2fd; /* Fondo azul muy claro */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #bbdefb; /* Borde azul claro */
+        }
+        h1 {
+            color: #1a237e; /* Azul oscuro profundo */
+            text-align: center;
+            margin-bottom: 35px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .section-title {
+            background-color: #90caf9; /* Azul medio para títulos de sección */
+            color: #1a237e; /* Azul oscuro */
+            padding: 15px 25px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: 1.6em;
+            font-weight: bold;
+            border-left: 5px solid #2196f3; /* Borde azul brillante */
+        }
+        .content-box {
+            background-color: #e3f2fd; /* Azul muy claro para el contenido */
+            border: 1px solid #90caf9;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+        .console-output {
+            background-color: #263238; /* Gris oscuro para la consola */
+            color: #a5d6a7; /* Verde claro para el texto de la consola */
+            padding: 15px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            white-space: pre-wrap;
+            border-radius: 6px;
+            min-height: 60px; /* Para que sea visible incluso vacío */
+            font-size: 0.9em;
+            margin-top: 15px; /* Separación del párrafo o botón */
+        }
+        p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #e0e0e0; /* Gris neutro para código inline */
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            color: #333;
+        }
+        button {
+            background-color: #2196f3; /* Azul brillante para el botón */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1976d2; /* Azul más oscuro al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calidad del Curso: Módulos JavaScript</h1>
+        <p style="text-align: center; color: #555;">&lt;F12&gt; para ver la mayoría de los resultados en la consola del navegador.</p>
+
+        <!-- Sección para 13.1 Módulos, introducción -->
+        <div class="section-title">13.1 Módulos: Una Introducción</div>
+        <div class="content-box">
+            <p>Este segmento explorará los conceptos fundamentales de los módulos en JavaScript, cómo estructuran el código y mejoran la mantenibilidad.</p>
+            <div id="modulos-introduccion-output" class="console-output">
+                <!-- El contenido de la consola se inyectará aquí o se verá en F12 -->
+                Revisa la consola (F12) para ver los mensajes de este tema.
+            </div>
+        </div>
+
+        <!-- Sección para 13.2 Exportación e importación -->
+        <div class="section-title">13.2 Declaración de Exportación e Importación</div>
+        <div class="content-box">
+            <p>Aquí se demostrará el uso práctico de las sentencias <code>export</code> e <code>import</code> para compartir variables, funciones y clases entre diferentes archivos de módulo.</p>
+            <div id="exportacion-importacion-output" class="console-output">
+                Revisa la consola (F12) para ver los resultados de las importaciones.
+                <br>
+                <!-- Aquí podemos mostrar un resultado directo si es posible -->
+            </div>
+        </div>
+
+        <!-- Sección para 13.3 Importaciones dinámicas -->
+        <div class="section-title">13.3 Importaciones Dinámicas</div>
+        <div class="content-box">
+            <p>Este tema ilustra cómo cargar módulos de forma dinámica en tiempo de ejecución, una técnica esencial para optimizar el rendimiento de la aplicación y el "code splitting".</p>
+            <p>Se cargará un módulo auxiliar al hacer clic en el botón a continuación:</p>
+            <button id="cargarModuloBtn">Cargar Módulo Dinámico</button>
+            <div id="importaciones-dinamicas-output" class="console-output">
+                <!-- Aquí se mostrarán los resultados de la importación dinámica -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script principal. notar type="module" para permitir import/export -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

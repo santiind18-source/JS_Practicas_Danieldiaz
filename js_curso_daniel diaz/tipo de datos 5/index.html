@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas JavaScript - Tipos de Datos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más formal */
+            margin: 20px;
+            background-color: #e0e7eb; /* Gris azulado claro */
+            color: #2c3e50; /* Azul oscuro para el texto principal */
+            line-height: 1.6;
+        }
+        h1 {
+            color: #225a81; /* Azul marino profundo */
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase; /* Mayúsculas para un toque más fuerte */
+            letter-spacing: 1.5px;
+        }
+        h2 {
+            color: #34495e; /* Gris oscuro para los títulos de sección */
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            font-size: 1.8em;
+        }
+        .section-container {
+            background-color: #ffffff; /* Fondo blanco para las secciones */
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra más definida */
+            border: 1px solid #cddde6; /* Borde sutil */
+        }
+        .result-box {
+            background-color: #f0f4f7; /* Gris azulado muy claro */
+            border-left: 5px solid #225a81; /* Borde azul marino */
+            padding: 18px;
+            margin-top: 20px;
+            font-family: 'Consolas', 'Menlo', 'monospace'; /* Fuente de código estándar */
+            white-space: pre-wrap;
+            color: #333;
+            border-radius: 4px;
+        }
+        .console-hint {
+            color: #607d8b; /* Gris azulado medio */
+            font-size: 0.95em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        pre {
+            background-color: #ecedee;
+            padding: 12px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #d0d7da;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prácticas del Curso de JavaScript - Tipos de Datos</h1>
+
+    <div class="section-container" id="tema-5-1">
+        <h2>5.1 Métodos de Primitivos</h2>
+        <p>Aquí se exploran cómo los tipos de datos primitivos (números, cadenas, etc.) pueden tener métodos. Aunque no son objetos, JavaScript permite acceder a sus funcionalidades como si lo fueran, convirtiéndolos temporalmente en objetos para usar sus métodos.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de los métodos de primitivos.</p>
+            <div id="resultado-5-1"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-2">
+        <h2>5.2 Números</h2>
+        <p>Este apartado se centra en el manejo de números en JavaScript, incluyendo operaciones aritméticas, conversiones y métodos específicos para trabajar con valores numéricos.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de las operaciones con números.</p>
+            <div id="resultado-5-2"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-3">
+        <h2>5.3 Cadenas (Strings)</h2>
+        <p>Exploración de las cadenas de texto en JavaScript: cómo se declaran, métodos comunes para manipularlas (longitud, acceso a caracteres, búsqueda, reemplazo) y su inmutabilidad.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de las manipulaciones de cadenas.</p>
+            <div id="resultado-5-3"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-4">
+        <h2>5.4 Matrices (Arrays)</h2>
+        <p>Este tema cubre los arrays, una estructura fundamental para almacenar colecciones de datos. Se muestra cómo crearlos, acceder a elementos y algunos métodos básicos para añadir o eliminar.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de las operaciones con arrays.</p>
+            <div id="resultado-5-4"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-5">
+        <h2>5.5 Métodos de Matriz</h2>
+        <p>Profundización en los métodos más avanzados de los arrays, como `forEach`, `map`, `filter`, `reduce`, `sort`, `find`, entre otros, que facilitan la manipulación y transformación de colecciones.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de los métodos avanzados de arrays.</p>
+            <div id="resultado-5-5"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-6">
+        <h2>5.6 Iterables</h2>
+        <p>Introducción al concepto de iterables en JavaScript. Se explica qué son, cómo funcionan y cómo los bucles `for...of` pueden utilizarlos para recorrer colecciones de datos.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de la iteración.</p>
+            <div id="resultado-5-6"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-7">
+        <h2>5.7 Mapa y Conjunto (Map y Set)</h2>
+        <p>Exploración de dos nuevas estructuras de datos: `Map` (colecciones de clave-valor donde las claves pueden ser de cualquier tipo) y `Set` (colecciones de valores únicos).</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de Map y Set.</p>
+            <div id="resultado-5-7"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-8">
+        <h2>5.8 Mapa Débil y Conjunto Débil (WeakMap y WeakSet)</h2>
+        <p>Presentación de las versiones "débiles" de `Map` y `Set`. Se discute su propósito, principalmente para la recolección de basura, y sus diferencias con `Map` y `Set` regulares.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para entender el comportamiento de WeakMap y WeakSet.</p>
+            <div id="resultado-5-8"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-9">
+        <h2>5.9 Object.keys, values, entries</h2>
+        <p>Demostración de los métodos estáticos del objeto global `Object` que permiten obtener las claves, valores o pares clave-valor de un objeto como arrays iterables.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de Object.keys, values, entries.</p>
+            <div id="resultado-5-9"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-10">
+        <h2>5.10 Asignación de Desestructuración</h2>
+        <p>Introducción a la asignación de desestructuración, una sintaxis poderosa que permite "desempaquetar" valores de arrays o propiedades de objetos en variables separadas de manera concisa.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de la desestructuración.</p>
+            <div id="resultado-5-10"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-11">
+        <h2>5.11 Fecha y Hora (Date and Time)</h2>
+        <p>Manejo de fechas y horas en JavaScript utilizando el objeto `Date`. Se exploran cómo crear fechas, obtener componentes (año, mes, día) y formatearlas.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de Date.</p>
+            <div id="resultado-5-11"></div>
+        </div>
+    </div>
+
+    <div class="section-container" id="tema-5-12">
+        <h2>5.12 Métodos JSON, toJSON</h2>
+        <p>Exploración de la serialización y deserialización de objetos JavaScript a y desde el formato JSON, usando `JSON.stringify` y `JSON.parse`, y el método `toJSON` personalizado.</p>
+        <div class="result-box">
+            <h3>Resultado en Consola / HTML:</h3>
+            <p class="console-hint">Ver la consola (F12) para los resultados de JSON.</p>
+            <div id="resultado-5-12"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

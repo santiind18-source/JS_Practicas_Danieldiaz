@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Profesional en JavaScript</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #eef2f6; /* Fondo gris azulado muy claro */
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50; /* Azul oscuro para el encabezado */
+            padding: 25px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #ffffff; /* Blanco para el título principal */
+            font-weight: 700;
+        }
+        .container {
+            width: 85%;
+            max-width: 960px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .info-bar {
+            background-color: #dbe4ee; /* Barra de información gris azulado claro */
+            padding: 12px 20px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            color: #555;
+            text-align: center;
+            font-size: 1.1em;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        section {
+            background-color: #ffffff;
+            border: 1px solid #c9d6e4; /* Borde gris azulado suave */
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease-in-out;
+        }
+        section:hover {
+            transform: translateY(-3px); /* Pequeño efecto al pasar el ratón */
+        }
+        section h2 {
+            background-color: #34495e; /* Azul grisáceo oscuro para el título del tema */
+            color: #ffffff; /* Texto blanco */
+            margin: 0;
+            padding: 18px 25px;
+            font-size: 1.7em;
+            border-bottom: 2px solid #3498db; /* Línea azul destacada */
+            font-weight: 600;
+        }
+        section .content {
+            padding: 25px;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 18px;
+            border: 1px dashed #7a9cb6; /* Borde punteado azul grisáceo */
+            background-color: #e0e9f1; /* Fondo gris azulado para el output */
+            color: #2c3e50; /* Texto azul oscuro */
+            border-radius: 6px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95em;
+        }
+        pre {
+            background-color: #f4f7fa; /* Fondo muy claro para el código */
+            padding: 18px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #e0e6ec;
+            margin-top: 15px;
+        }
+        code {
+            font-family: 'Fira Code', Consolas, monospace;
+            color: #c0392b; /* Rojo sobrio para el código */
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 1em;
+            color: #555;
+        }
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Excelencia en JavaScript</h1>
+    </header>
+
+    <div class="container">
+        <div class="info-bar">
+            Presiona &lt;F12&gt; para ver la mayoría de los resultados en la consola del navegador.
+        </div>
+
+        <!-- 3.1 Depuración en el navegador -->
+        <section id="tema-3-1">
+            <h2>3.1 Depuración en el Navegador</h2>
+            <div class="content">
+                <p>Aquí se mostrarán mensajes esenciales en la consola del navegador para un proceso de depuración eficiente.</p>
+                <div class="output" id="output-3-1"></div>
+            </div>
+        </section>
+
+        <!-- 3.2 Estilo de codificación -->
+        <section id="tema-3-2">
+            <h2>3.2 Estilo de Codificación Óptimo</h2>
+            <div class="content">
+                <p>Ejemplo práctico de código con un estilo y formato limpios, siguiendo las mejores prácticas.</p>
+                <pre><code id="code-3-2"></code></pre>
+                <div class="output" id="output-3-2"></div>
+            </div>
+        </section>
+
+        <!-- 3.3 Comentarios -->
+        <section id="tema-3-3">
+            <h2>3.3 Estrategias de Comentarios</h2>
+            <div class="content">
+                <p>Este tema se explica en detalle a través de la documentación y los comentarios relevantes en el archivo `main.js`.</p>
+                <div class="output" id="output-3-3">Revisa el archivo main.js para ver los ejemplos de comentarios y documentación.</div>
+            </div>
+        </section>
+
+        <!-- 3.4 Código ninja -->
+        <section id="tema-3-4">
+            <h2>3.4 Evitando el "Código Ninja"</h2>
+            <div class="content">
+                <p>Análisis de por qué la claridad y la legibilidad son prioritarias, desaconsejando el uso de código excesivamente conciso y complejo.</p>
+                <pre><code id="code-3-4"></code></pre>
+                <div class="output" id="output-3-4"></div>
+            </div>
+        </section>
+
+        <!-- 3.5 Pruebas automatizadas con Mocha -->
+        <section id="tema-3-5">
+            <h2>3.5 Pruebas Automatizadas (Mocha)</h2>
+            <div class="content">
+                <p>Introducción a la integración de pruebas unitarias. Este ejercicio simula la función y destaca la importancia de las pruebas en el desarrollo.</p>
+                <div class="output" id="output-3-5"></div>
+            </div>
+        </section>
+
+        <!-- 3.6 Polipastos y transpiladores -->
+        <section id="tema-3-6">
+            <h2>3.6 Polipastos y Transpiladores</h2>
+            <div class="content">
+                <p>Exploración de la necesidad y el funcionamiento de polipastos (polyfills) y transpiladores en el entorno de desarrollo moderno de JavaScript.</p>
+                <div class="output" id="output-3-6"></div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
